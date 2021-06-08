@@ -1,0 +1,14 @@
+:host {
+    background: #252424!important
+}
+
+.carousel-fade {
+    max-width: 800px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 25%;
+}
+
+.fa .fa-cart-plus {
+    color: black!important;
+}
