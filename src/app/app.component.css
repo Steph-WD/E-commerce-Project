@@ -5,3 +5,8 @@
 .nav-link .active {
     color: black;
 }
+
+.d-flex {
+    display: flex!important;
+    margin-left: 50%;
+}
