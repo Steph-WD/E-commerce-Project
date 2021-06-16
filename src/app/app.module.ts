@@ -8,6 +8,9 @@ import { CajaComponent } from './caja/caja.component';
 
 import { ListaProductoComponent } from './lista-producto/lista-producto.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { ProductoComponent } from './producto/producto.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
+import { AdministradorComponent } from './administrador/administrador.component';
 
 
 @NgModule({
@@ -17,6 +20,9 @@ import { CarritoComponent } from './carrito/carrito.component';
     CajaComponent,
     ListaProductoComponent,
     CarritoComponent,
+    ProductoComponent,
+    UsuariosComponent,
+    AdministradorComponent,
     
      ],
   imports: [
