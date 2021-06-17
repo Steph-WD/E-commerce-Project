@@ -6,21 +6,13 @@
       </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="'/inicio'" aria-current="page">Inicio</a>
-                </li>
-                <!-- <li class="nav-item" *ngFor="let item of menu">
+
+                <li class="nav-item" *ngFor="let item of menu">
                     <a class="{{item.class}}" [routerLink]="item.enlace">{{item.nombre}}</a>
-                </li> -->
+                </li>
 
                 <li class="nav-item">
                     <a class="nav-link active" [routerLink]="'/carrito'" aria-current="page"><i class="bi bi-cart-check-fill"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="'/usuarios'" aria-current="page">Usuarios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" [routerLink]="'/Administrador'" aria-current="page">Administrador</a>
                 </li>
 
             </ul>
