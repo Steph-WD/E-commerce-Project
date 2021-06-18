@@ -3,19 +3,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { from } from 'rxjs';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { AppComponent } from './app.component';
-import { CajaComponent } from './caja/caja.component';
+import { ProductoComponent } from './producto/producto.component';
+import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { InicioComponent } from './inicio/inicio.component';
-import { ListaProductoComponent } from './lista-producto/lista-producto.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
+
 
 
 const routes: Routes = [
   {path:'inicio',component: InicioComponent},
   {path:'carrito',component: CarritoComponent},
-  {path:'caja',component: CajaComponent},
-  {path:'lista-producto' ,component: ListaProductoComponent},
-  {path:'usuarios',component: UsuariosComponent},
+  {path:'producto',component: ProductoComponent},
+  {path:'lista-productos',component: ListaProductosComponent},
+  
   {path:'administrador',component: AdministradorComponent},
 
 
