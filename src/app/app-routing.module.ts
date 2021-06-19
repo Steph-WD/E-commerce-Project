@@ -7,6 +7,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { CarritoComponent } from './carrito/carrito.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { ProductoCrudComponent } from './producto-crud/producto-crud.component';
 
 
 
@@ -15,8 +17,9 @@ const routes: Routes = [
   {path:'carrito',component: CarritoComponent},
   {path:'producto',component: ProductoComponent},
   {path:'lista-productos',component: ListaProductosComponent},
-  
-  {path:'administrador',component: AdministradorComponent},
+  {path:'producto/:id',component: ProductoDetalleComponent},
+    {path:'administrador',component: AdministradorComponent},
+    {path:'productos',component: ProductoCrudComponent},
 
 
 

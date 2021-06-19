@@ -8,6 +8,10 @@ import { ProductoComponent } from './producto/producto.component';
 import { AdministradorComponent } from './administrador/administrador.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { HttpClientModule} from '@angular/common/http'
+import { ProductoService } from './services/producto.service';
+import { ProductoCrudComponent } from './producto-crud/producto-crud.component';
 
 
 @NgModule({
@@ -18,6 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductoComponent,
         AdministradorComponent,
     ListaProductosComponent,
+    ProductoDetalleComponent,
+    ProductoCrudComponent,
     
     
      ],
@@ -25,10 +31,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [ProductoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
