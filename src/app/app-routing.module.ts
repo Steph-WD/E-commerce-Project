@@ -9,6 +9,7 @@ import { CarritoComponent } from './carrito/carrito.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
 import { ProductoCrudComponent } from './producto-crud/producto-crud.component';
+import { CrearProductoComponent } from './crear-producto/crear-producto.component';
 
 
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   {path:'producto/:id',component: ProductoDetalleComponent},
     {path:'administrador',component: AdministradorComponent},
     {path:'productos',component: ProductoCrudComponent},
+    {path:'crear-producto',component: CrearProductoComponent},
 
 
 

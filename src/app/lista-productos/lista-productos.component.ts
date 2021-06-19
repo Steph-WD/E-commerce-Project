@@ -11,6 +11,9 @@ export class ListaProductosComponent implements OnInit {
 
 productos: Producto[]= []
 sku = "";
+desde = "";
+hasta = "";
+
 backup: Producto[]; 
 
   constructor(private productoService: ProductoService ) {
