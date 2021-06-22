@@ -11,8 +11,10 @@ export class ListaProductosComponent implements OnInit {
 
 productos: any= []
 sku = "";
-desde = "";
-hasta = "";
+desde = 0;
+hasta = 0;
+showTrash = false;
+showJumbotron = false
 
 backup: Producto[];
 
@@ -26,7 +28,13 @@ backup: Producto[];
     }
       )
   }
-
+  limpiar(){
+    this.showTrash = false;
+    this.sku = "",
+    this.desde = 0,
+    this.hasta = 0,
+    this.productos = this.backup;
+  }
 filtrar() {
 let filteredProducts = this.productos.filter((producto:Producto) => {
   return producto.codigo.toLowerCase === this.sku.toLowerCase;

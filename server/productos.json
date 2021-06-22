@@ -72,7 +72,7 @@
             "codigo": "ASSDF",
             "precio": "USD 100",
             "descripcion": "Falda a cuadros marron",
-            "imagenUrl": "https://www.pexels.com/es-es/foto/sudadera-rosa-de-mujer-y-falda-de-cuadros-marrones-794064/"
+            "imagenUrl": "assets/img10.jpg"
         },
         {
             "id": 2,
@@ -80,7 +80,7 @@
             "codigo": "ERDFF",
             "precio": "USD 200",
             "descripcion": "Pantalón gris con puntilla blanca",
-            "imagenUrl": "https://www.pexels.com/es-es/foto/mujer-en-chaqueta-gris-se-encuentra-en-el-piso-de-hormigon-gris-914668/"
+            "imagenUrl": "assets/img7.jpg"
         },
         {
             "id": 3,
@@ -88,7 +88,7 @@
             "codigo": "ERFSS",
             "precio": "USD 250",
             "descripcion": "Saco de abrigo a cuadros",
-            "imagenUrl": "https://www.pexels.com/es-es/foto/foto-de-hombre-vestido-con-abrigo-2706265/"
+            "imagenUrl": "assets/img5.jpg"
         },
         {
             "id": 4,
@@ -96,7 +96,7 @@
             "codigo": "AASSD",
             "precio": "USD 250",
             "descripcion": "Saco de paño gris",
-            "imagenUrl": "https://www.pexels.com/es-es/foto/persona-en-abrigo-gris-con-sombrero-negro-3651597/"
+            "imagenUrl": "assets/img1.jpg"
         }
     ]
 }

@@ -12,6 +12,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './shared/login/login.component';
 import { UsuariosComponent } from './abms/usuarios/usuarios.component';
 import { RouterModule } from '@angular/router';
+import { CajaComponent } from './caja/caja.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RouterModule } from '@angular/router';
     ListaProductosComponent,
     ProductoComponent,
     ProductoDetalleComponent,
-    InicioComponent
+    InicioComponent,
+    CajaComponent
   ],
   imports: [
     BrowserModule,

@@ -10,3 +10,7 @@
     display: flex!important;
     margin-left: 50%;
 }
+
+.navbar-toggler {
+    color: whitesmoke!important
+}
