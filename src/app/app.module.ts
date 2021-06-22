@@ -1,3 +1,7 @@
+import { InicioComponent } from './inicio/inicio.component';
+import { ProductoDetalleComponent } from './producto-detalle/producto-detalle.component';
+import { ProductoComponent } from './producto/producto.component';
+import { ListaProductosComponent } from './lista-productos/lista-productos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -13,7 +17,11 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     LoginComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    ListaProductosComponent,
+    ProductoComponent,
+    ProductoDetalleComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,

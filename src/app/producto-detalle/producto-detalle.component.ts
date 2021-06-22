@@ -16,13 +16,13 @@ _producto :any;
       const id = route.get('id');
 
       if (id !== null) {
-        this._productoService.getAll().subscribe(response => {
-          this._producto = response.filter(item => {
+        this._productoService.getProducts().subscribe((response:any) => {
+          this._producto = response.filter((item:any) => {
             return item.id === parseInt(id);
           })[0]
                 });
       }
- 
+
     });
   }
 }

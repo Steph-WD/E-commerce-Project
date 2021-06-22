@@ -8,7 +8,7 @@ import { ProductoService } from '../services/producto.service';
   styleUrls: ['./producto.component.css']
 })
 export class ProductoComponent implements OnInit {
-  @Input() productos:Producto = new Producto();
+  @Input() producto:Producto = new Producto();
 qty = 0
   constructor() { }
 
@@ -16,6 +16,13 @@ qty = 0
 
   }
 less () {
+
+}
+plus(){
+
+}
+
+addCart(producto:Producto){
 
 }
 }

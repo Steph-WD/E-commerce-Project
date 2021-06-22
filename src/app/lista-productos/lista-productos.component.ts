@@ -9,26 +9,26 @@ import { ProductoService } from '../services/producto.service';
 })
 export class ListaProductosComponent implements OnInit {
 
-productos: Producto[]= []
+productos: any= []
 sku = "";
 desde = "";
 hasta = "";
 
-backup: Producto[]; 
+backup: Producto[];
 
   constructor(private productoService: ProductoService ) {
     this.backup = this.productos;
    }
 
   ngOnInit(): void {
-    this.productoService.getAll().subscribe(response => {
-this.productos = response;
+    this.productoService.getProducts().subscribe(response => {
+    this.productos = response;
     }
       )
   }
 
 filtrar() {
-let filteredProducts = this.productos.filter(producto => {
+let filteredProducts = this.productos.filter((producto:Producto) => {
   return producto.codigo.toLowerCase === this.sku.toLowerCase;
 })
 this.productos = filteredProducts;

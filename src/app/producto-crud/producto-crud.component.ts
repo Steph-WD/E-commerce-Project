@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from 'src/app/clases/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
@@ -8,19 +9,19 @@ import { ProductoService } from 'src/app/services/producto.service';
   styleUrls: ['./producto-crud.component.css']
 })
 export class ProductoCrudComponent implements OnInit {
-columnas= [ 
+columnas= [
   '',
   'nombre',
   'codigo',
   'precio',
   'descripcion',
-  
+
 ]
-productos : Producto[] =[]
-  constructor(private _productoService: ProductoService, private route:) { }
+productos : any;
+  constructor(private _productoService: ProductoService, private route:Router) { }
 
   ngOnInit(): void {
-    this._productoService.getAll().subscribe(response => {
+    this._productoService.getProducts().subscribe(response => {
       this.productos = response;
     })
   }
