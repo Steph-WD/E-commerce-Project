@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsuariosComponent } from './abms/usuarios/usuarios.component';
 import { LoginComponent } from './shared/login/login.component';
-import { AdministradorComponent } from '../../src copy/app/administrador/administrador.component';
+import { AdministradorComponent } from 'src/app/administrador/administrador.component';
 import { AppComponent } from './app.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';

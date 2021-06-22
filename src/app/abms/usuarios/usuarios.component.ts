@@ -8,7 +8,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  users:Usuario[];
+  users:Usuario[] = [];
   showForm = false;
   usuario:Usuario = {
     id:"",
@@ -38,7 +38,7 @@ export class UsuariosComponent implements OnInit {
     this.showForm = !this.showForm;
   }
 
-  submit(event){
+  submit(event:any){
     event.preventDefault();
     if (this.usuario.id === "") {
       this._userService.insertarUsuario(this.usuario).subscribe((response:any)=>{
@@ -69,12 +69,12 @@ export class UsuariosComponent implements OnInit {
 
   }
 
-  onChange(event){
+  onChange(event:any){
     console.log(event)
     this.usuario.role = event.target.id === "admin"? "Admin":"Usuario"
   }
 
-  update(usuario){
+  update(usuario: Usuario){
     this.showForm = true;
     this.usuario.username = usuario.username;
     this.usuario.password = usuario.password;

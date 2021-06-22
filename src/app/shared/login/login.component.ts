@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login(event){
+  login(event:any){
     event.preventDefault();
     let user = {
       "username":this.username,
