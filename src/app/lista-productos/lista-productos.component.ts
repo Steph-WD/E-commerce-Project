@@ -25,6 +25,7 @@ backup: Producto[];
   ngOnInit(): void {
     this.productoService.getProducts().subscribe(response => {
     this.productos = response;
+    console.log(response)
     }
       )
   }

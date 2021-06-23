@@ -21,16 +21,25 @@ productos : any;
   constructor(private _productoService: ProductoService, private route:Router) { }
 
   ngOnInit(): void {
+    console.log("hola")
     this._productoService.getProducts().subscribe(response => {
       this.productos = response;
+    
     })
   }
 updateProducto(producto: Producto) {
 
 }
-deleteProducto(id: number) {
-
-}
+deleteProducto(id: number){
+  this._productoService.eliminarProducts(id).subscribe((response:any)=>{
+    console.log(response)
+    const newItems = this.productos.filter((item:any)=>{
+      return item.id !== id
+    });
+    this.productos = newItems;
+  })
+  }
+  
 
 insertarProducto(){
 //   this._productoService.insertarProducto({

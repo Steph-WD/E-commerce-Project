@@ -9,27 +9,11 @@ import { UserService } from './services/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  menu = [
-    {
-nombre: "Inicio",
-enlace: "/inicio",
-class: "nav-link active"
-    },
-    {
-      nombre: "Usuarios",
-      enlace: "/usuarios",
-      class: "nav-link active"
-          },
-    
-          {
-            nombre: "Administrador",
-            enlace: "/administrador",
-            class: "nav-link active"
-                },
+ 
                
                 
                
-  ]
+  
 
   title = 'Suits Store';
 

@@ -17,7 +17,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'abms/usuarios',component:UsuariosComponent},
   {path:'inicio',component: InicioComponent},
-  {path:'caja', component: CajaComponent},
+  {path:'Caja', component: CajaComponent},
   {path:'producto',component: ProductoComponent},
   {path:'lista-productos',component: ListaProductosComponent},
   {path:'producto/:id',component: ProductoDetalleComponent},

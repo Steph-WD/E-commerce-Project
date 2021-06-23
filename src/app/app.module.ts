@@ -13,6 +13,8 @@ import { LoginComponent } from './shared/login/login.component';
 import { UsuariosComponent } from './abms/usuarios/usuarios.component';
 import { RouterModule } from '@angular/router';
 import { CajaComponent } from './caja/caja.component';
+import { CommonModule } from '@angular/common';
+import { ProductoCrudComponent } from './producto-crud/producto-crud.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { CajaComponent } from './caja/caja.component';
     ListaProductosComponent,
     ProductoComponent,
     ProductoDetalleComponent,
+    ProductoCrudComponent,
     InicioComponent,
     CajaComponent
   ],
@@ -30,7 +33,9 @@ import { CajaComponent } from './caja/caja.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    RouterModule
+    RouterModule,
+    CommonModule
+
   ],
   providers: [
     HttpClientModule
