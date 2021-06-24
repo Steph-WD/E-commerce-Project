@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/classes/usuario';
 import { UserService } from 'src/app/services/user.service';
 
@@ -11,11 +12,14 @@ export class UsuariosComponent implements OnInit {
   users: Usuario[] = [];
   showForm = false;
   usuario:Usuario = {
-    id:"",
+    id:0,
     username:"",
     password:"",
     role:""
   }
+  sku = "";
+  showTrash = false;
+  backup: Usuario[] = [];
   opResult = {
     success:false,
     error:false
@@ -31,6 +35,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this._userService.getUsers().subscribe((response:any)=>{
       this.users = response;
+      this.backup = this.users;
     })
   }
 
@@ -40,7 +45,7 @@ export class UsuariosComponent implements OnInit {
 
   submit(event:any){
     event.preventDefault();
-    if (this.usuario.id === "") {
+    if (this.usuario.id === 0) {
       this._userService.insertarUsuario(this.usuario).subscribe((response:any)=>{
         console.log(response)
         this.users.push(response);
@@ -81,8 +86,37 @@ export class UsuariosComponent implements OnInit {
     this.usuario.role = usuario.role;
     this.usuario.id = usuario.id
   }
+eliminar(id: number){
+this._userService.eliminarUsuario(id).subscribe((response:any)=>{
+  console.log(response)
+  const newItems = this.users.filter((item:any)=>{
+    return item.id !== id
+  });
+  this.users = newItems;
+})
+}
 
   hide(){
     this.opResult.success = true
   }
+
+  filtrar(){
+
+    if(this.sku.length > 0){
+      let filteredUsers = this.users.filter(usuario =>{
+        return usuario.username.toLowerCase() === this.sku.toLowerCase();
+      });
+      this.users = filteredUsers;
+    };
+       }
+
+       handle(){
+        this.showTrash = true;
+      };
+
+      limpiar(){
+        this.showTrash = false;
+        this.sku = "";
+        this.users = this.backup
+      }
 }
