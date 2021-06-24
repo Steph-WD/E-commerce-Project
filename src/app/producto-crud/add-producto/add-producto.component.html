@@ -1,6 +1,6 @@
 <div class="row" style="background: white;padding:15px 15px;margin: 0;">
     <form class="row gy-2 gx-3 align-items-center" style="width:50%">
-        <div class="mb-3">
+      <!--  <div class="mb-3">
             <label for="nombre" class="form-label">Nombre</label>
             <input type="text" [(ngModel)]="producto.nombre" class="form-control" name="nombre">
         </div>
@@ -8,21 +8,20 @@
             <label for="codigo" class="form-label">Codigo</label>
             <input type="text" [(ngModel)]="producto.codigo" class="form-control" name="codigo">
         </div>
-
         <div class="input-group mb-3">
-            <label for="precioc" class="form-label">Precio</label>
+            <label for="precio" class="form-label">Precio</label>
             <span class="input-group-text">$</span>
-            <input type="text" [(ngModel)]="producto.precio" class="form-control" name="precioc" aria-label="Amount (to the nearest dollar)">
+            <input type="text" [(ngModel)]="producto.precio" class="form-control" name="precio" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
-        </div>
-
-        <div class="mb-3">
-            <label for="imagenUrl" class="form-label">Imagen</label>
-            <input type="text" [(ngModel)]="producto.imagenUrl" class="form-control" name="imagenUrl">
         </div>
         <div class="mb-3">
             <textarea name="descripcion" [(ngModel)]="producto.descripcion" placeholder="Descripcion" name="descripcion" cols="78" rows="10"></textarea>
         </div>
+        <div class="mb-3">
+            <label for="imagenUrl" class="form-label">Imagen</label>
+            <input type="text" [(ngModel)]="producto.imagenUrl" class="form-control" name="imagenUrl">
+        </div>-->
+       
 
         <button type="submit" (click)="save($event)" class="btn btn-primary">Guardar</button>
     </form>

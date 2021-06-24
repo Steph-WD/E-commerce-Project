@@ -8,8 +8,8 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class LoginComponent implements OnInit {
 
-    username = "admin"
-    password = "admin"
+    username = ""
+    password = ""
 
 
   constructor(private _loginService: LoginService) { }
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   }
 
-  login(event:any){
+  login(event){
     event.preventDefault();
     let user = {
       "username":this.username,

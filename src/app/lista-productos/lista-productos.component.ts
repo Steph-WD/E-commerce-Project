@@ -9,23 +9,24 @@ import { ProductoService } from '../services/producto.service';
 })
 export class ListaProductosComponent implements OnInit {
 
-productos: any= []
+  productos:Producto[] = []
 sku = "";
 desde = 0;
 hasta = 0;
 showTrash = false;
 showJumbotron = false
 
-backup: Producto[];
+backup: Producto[]= [];
 
   constructor(private productoService: ProductoService ) {
-    this.backup = this.productos;
+    
    }
 
   ngOnInit(): void {
-    this.productoService.getProducts().subscribe(response => {
+    this.productoService.getAll().subscribe(response => {
     this.productos = response;
-    console.log(response)
+    console.log(response);
+    this.backup = this.productos;
     }
       )
   }
@@ -37,14 +38,27 @@ backup: Producto[];
     this.productos = this.backup;
   }
 filtrar() {
-let filteredProducts = this.productos.filter((producto:Producto) => {
-  return producto.codigo.toLowerCase === this.sku.toLowerCase;
-})
-this.productos = filteredProducts;
+
+  if(this.sku.length > 0){
+    let filteredProducts = this.productos.filter(producto =>{
+      return producto.codigo.toLowerCase() === this.sku.toLowerCase();
+    });
+    this.productos = filteredProducts;
+  };
+
+  if(this.desde > 0 && this.hasta > 0){
+    let filteredProducts = this.productos.filter(producto =>{
+      return producto.precio >= this.desde && producto.precio <= this.hasta;
+    });
+    this.productos = filteredProducts;
+}
 }
 handleCod() {
   if (this.sku.length === 0) {
     this.productos = this.backup;
   }
+}
+handle(){
+  this.showTrash = true;
 }
 }

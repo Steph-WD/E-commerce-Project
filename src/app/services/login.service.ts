@@ -14,7 +14,7 @@ export class LoginService {
     console.log(user)
     this._userService.getUsers().subscribe((response:any)=>{
       const data = response;
-      let filter = response.filter((item:any) =>{
+      let filter = response.filter((item: { username: any; password: any; }) =>{
         return (item.username == user.username && item.password == user.password)
       });
 
@@ -30,14 +30,10 @@ export class LoginService {
   }
 
   isLogin(){
-    var log = sessionStorage.getItem("user");
-    if (log !=null) {
-      let user = JSON.parse(log);
+    let user = JSON.parse(sessionStorage.getItem("user"));
     if(user != null){
       return user;
     }
-    }
-    
     return 0;
   }
 

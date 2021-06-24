@@ -22,7 +22,7 @@ productos : any;
 
   ngOnInit(): void {
     console.log("hola")
-    this._productoService.getProducts().subscribe(response => {
+    this._productoService.getAll().subscribe(response => {
       this.productos = response;
     
     })
@@ -31,7 +31,7 @@ updateProducto(producto: Producto) {
 
 }
 deleteProducto(id: number){
-  this._productoService.eliminarProducts(id).subscribe((response:any)=>{
+  this._productoService.eliminarProducto(id).subscribe((response:any)=>{
     console.log(response)
     const newItems = this.productos.filter((item:any)=>{
       return item.id !== id
@@ -41,7 +41,7 @@ deleteProducto(id: number){
   }
   
 
-insertarProducto(){
+//insertarProducto(){
 //   this._productoService.insertarProducto({
 //     "id": 1,
 //     "nombre": "FALDA VENECIA",
@@ -52,6 +52,6 @@ insertarProducto(){
 // }).subscribe(response => {
 
 //   })
-this.route.navigate(['/crear-producto'])
-}
+//this.route.navigate(['/crear-producto'])
+//}
 }

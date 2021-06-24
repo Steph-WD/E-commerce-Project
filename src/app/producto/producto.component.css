@@ -1,9 +1,10 @@
+
 .qty {
     display: flex;
     position: relative;
     text-align: center;
+    align-self: center;
 }
-
-.btn .btn-primary .card-link {
-    text-align: center!important;
+.card-body{
+    align-self: center;
 }

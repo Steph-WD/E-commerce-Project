@@ -46,7 +46,6 @@ export class AddProductoComponent implements OnInit {
     this.producto.codigo = "";
     this.producto.nombre ="";
     this.producto.precio = 0;
-   
     this.producto.imagenUrl = "";
     this.producto.descripcion = "";
   }

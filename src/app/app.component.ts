@@ -8,14 +8,9 @@ import { UserService } from './services/user.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
- 
-               
-                
-               
-  
+export class AppComponent implements OnInit{ 
 
-  title = 'Suits Store';
+  title = 'app';
 
   constructor(private route: Router,private _userService: UserService, public _loginService:LoginService){
 
@@ -32,8 +27,3 @@ export class AppComponent implements OnInit{
     this.route.navigate(['/'])
   }
 }
-
-
-
-
-

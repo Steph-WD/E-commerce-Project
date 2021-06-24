@@ -1,0 +1,20 @@
+<table class="table" *ngIf="type === 'table'">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of datos">
+            <th scope="row"><img [src]="item.imagenUrl" width="150" alt=""></th>
+            <td>{{item.nombre}}</td>
+            <td>{{item.descripcion}}</td>
+        </tr>
+        <tr>
+    </tbody>
+</table>
+<div *ngIf="type === 'grid'" class="container" style="display: flex;justify-content: space-between;">
+    <app-card *ngFor="let item of datos" [descripcion]="item.descripcion" [titulo]="item.nombre" [imagenUrl]="item.imagenUrl"></app-card>
+</div>

@@ -1,7 +1,7 @@
-<div class="row" style="text-align-last: center;">
-    <h3>Administración de Usuarios</h3>
+<div class="row">
+    <h3>Gestion de Usuarios</h3>
+    <a class="btn btn-primary" (click)="fnShowForm()">Crear</a>
 </div>
-<button class="btn btn-secondary" (click)="fnShowForm()">Nuevo Usuario</button>
 <div class="alert alert-success" *ngIf="opResult.success" role="alert">
     {{opResultMsg}}
 </div>
@@ -11,48 +11,38 @@
 <div class="row" *ngIf="showForm">
     <form>
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre de usuario</label>
+            <label for="exampleInputEmail1" class="form-label">Username</label>
             <input type="email" [(ngModel)]="usuario.username" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp">
         </div>
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <label for="exampleInputPassword1" class="form-label">Password</label>
             <input type="password" [(ngModel)]="usuario.password" class="form-control" name="password" id="exampleInputPassword1">
         </div>
         <div class="mb-3 form-check">
             <input type="radio" (change)="onChange($event)" class="form-check-input" id="admin" name="role">
-            <label class="form-check-label" for="exampleCheck1">Administrador</label>
+            <label class="form-check-label" for="exampleCheck1">Admin</label>
         </div>
         <div class="mb-3 form-check">
             <input type="radio" (change)="onChange($event)" class="form-check-input" id="user" name="role">
-            <label class="form-check-label" for="exampleCheck1">Usuario basico</label>
+            <label class="form-check-label" for="exampleCheck1">User</label>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="submit($event)">Enviar</button>&nbsp;
+        <button type="submit" class="btn btn-primary" (click)="submit($event)">Submit</button>
         <button class="btn btn-primary" (click)="fnShowForm()">Cancelar</button>
     </form>
 </div>
 <div class="row" *ngIf="!showForm">
-    <!-- <h2>Filtro</h2>-->
+    <h2>Filtro</h2>
 </div>
 <br>
 <div class="row" *ngIf="!showForm">
-    <div class="col">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">Nombre de usuario:</span>
-            <input type="text" (input)="handle()" class="form-control" [(ngModel)]="sku" placeholder="" aria-label="codigo" aria-describedby="basic-addon1">
-        </div>
-    </div>
-    <div class="col">
-        <button class="btn btn-outline-success" (click)="filtrar()"><i class="bi bi-search"></i></button>
-        <button *ngIf="showTrash" class="btn btn-outline-success" (click)="limpiar()"><i class="bi bi-trash"></i></button>
-    </div>
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">Id usuario</th>
-                <th scope="col">Nombre de usuario</th>
-                <th scope="col">Contraseña</th>
-                <th scope="col">Role de usuario</th>
-                <th></th>
+                <th scope="col">Id</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Role</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -61,8 +51,7 @@
                 <td>{{item.username}}</td>
                 <td>{{item.password}}</td>
                 <td>{{item.role}}</td>
-                <td><a class="btn btn-outline-primary" (click)="update(item)">Modificar</a></td>
-                <td><a class="btn btn-outline-danger" (click)="eliminar(item.id)">Eliminar</a></td>
+                <td><a class="btn btn-primary" (click)="update(item)">Actualizar</a><a class="btn btn-danger">Eliminar</a></td>
             </tr>
         </tbody>
     </table>
