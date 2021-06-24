@@ -1,102 +1,108 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "username": "admin",
-      "password": "admin",
-      "role": "Admin"
-    },
-    {
-      "id": 1,
-      "username": "user",
-      "password": "user",
-      "role": "user"
-    },
-    {
-      "id": 2,
-      "username": "gg34rodriguez.com",
-      "password": "123eeddrr",
-      "role": "Usuario"
-    },
-    {
-      "id": 3,
-      "username": "stephaniegonzalez.com",
-      "password": "djrsghkyrk",
-      "role": "Usuario"
-    },
-    {
-      "id": 4,
-      "username": "daniel444",
-      "password": "lolo",
-      "role": "Admin"
-    },
-    {
-      "id": 5,
-      "username": "rodrigo123",
-      "password": "sryi",
-      "role": "Admin"
-    },
-    {
-      "id": 6,
-      "username": "Edith1233",
-      "password": "sryi",
-      "role": "Admin"
-    },
-    {
-      "id": 7,
-      "username": "Lorena4555",
-      "password": "sryi",
-      "role": "Usuario"
-    },
-    {
-      "id": 8,
-      "username": "Fatima456",
-      "password": "sryi",
-      "role": "Usuario"
-    },
-    {
-      "id": 9,
-      "username": "Loreto5566",
-      "password": "drtjykul",
-      "role": "Usuario"
-    },
-    {
-      "id": 10,
-      "username": "pepecastro4555@gmail.com",
-      "password": "ftukiotufdou",
-      "role": "Usuario"
-    },
-    {
-      "id": 11,
-      "username": "stephaniegonzalez.ab@gmail.com",
-      "password": "dlijf{aoiewjf",
-      "role": "Admin"
-    }
-  ],
-  "productos": [
-    {
-      "id": 2,
-      "nombre": "PANTALON MABEL",
-      "codigo": "ERDFF",
-      "precio": "USD 200",
-      "descripcion": "Pantalón gris con puntilla blanca",
-      "imagenUrl": "assets/img7.jpg"
-    },
-    {
-      "id": 3,
-      "nombre": "SACO ABRIGO JAPON",
-      "codigo": "ERFSS",
-      "precio": "USD 250",
-      "descripcion": "Saco de abrigo a cuadros",
-      "imagenUrl": "assets/img5.jpg"
-    },
-    {
-      "id": 4,
-      "nombre": "SACO ABRIGO FERDINAND",
-      "codigo": "AASSD",
-      "precio": "USD 250",
-      "descripcion": "Saco de paño gris",
-      "imagenUrl": "assets/img1.jpg"
-    }
-  ]
+    "users": [{
+            "id": 1,
+            "username": "admin",
+            "password": "admin",
+            "role": "Admin"
+        },
+        {
+            "id": 2,
+            "username": "user",
+            "password": "user",
+            "role": "user"
+        },
+        {
+            "id": 3,
+            "username": "gg34rodriguez.com",
+            "password": "123eeddrr",
+            "role": "Usuario"
+        },
+        {
+            "id": 4,
+            "username": "stephaniegonzalez.com",
+            "password": "djrsghkyrk",
+            "role": "Usuario"
+        },
+        {
+            "id": 5,
+            "username": "daniel444",
+            "password": "lolo",
+            "role": "Admin"
+        },
+        {
+            "id": 6,
+            "username": "rodrigo123",
+            "password": "sryi",
+            "role": "Admin"
+        },
+        {
+            "id": 7,
+            "username": "Edith1233",
+            "password": "sryi",
+            "role": "Admin"
+        },
+        {
+            "id": 8,
+            "username": "Lorena4555",
+            "password": "sryi",
+            "role": "Usuario"
+        },
+        {
+            "id": 9,
+            "username": "Fatima456",
+            "password": "sryi",
+            "role": "Usuario"
+        },
+        {
+            "id": 10,
+            "username": "Loreto5566",
+            "password": "drtjykul",
+            "role": "Usuario"
+        },
+        {
+            "id": 11,
+            "username": "pepecastro4555@gmail.com",
+            "password": "ftukiotufdou",
+            "role": "Usuario"
+        },
+        {
+            "id": 12,
+            "username": "stephaniegonzalez.ab@gmail.com",
+            "password": "dlijf{aoiewjf",
+            "role": "Admin"
+        }
+    ],
+    "productos": [{
+            "id": 3,
+            "nombre": "SACO ABRIGO JAPON",
+            "codigo": "ERFSS",
+            "precio": 250,
+            "descripcion": "Saco de abrigo a cuadros",
+            "imagenUrl": "assets/img5.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "SACO ABRIGO FERDINAND",
+            "codigo": "AASSD",
+            "precio": 250,
+            "descripcion": "Saco de paño gris",
+            "imagenUrl": "assets/img1.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "SACO ABRIGO FERDINAND",
+            "codigo": "AASSD",
+            "precio": 250,
+            "descripcion": "Saco de paño gris",
+            "imagenUrl": "assets/img1.jpg"
+        },
+        {
+            "id": 4,
+            "nombre": "SACO ABRIGO FERDINAND",
+            "codigo": "AASSD",
+            "precio": 250,
+            "descripcion": "Saco de paño gris",
+            "imagenUrl": "assets/img1.jpg"
+        }
+    ]
 }

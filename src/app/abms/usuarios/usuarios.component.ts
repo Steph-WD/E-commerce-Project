@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Usuario } from 'src/app/classes/usuario';
 import { UserService } from 'src/app/services/user.service';
 
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  users:Usuario[] = [];
+  users: Usuario[] = []; 
   showForm = false;
   usuario:Usuario = {
     id:"",
@@ -16,6 +17,9 @@ export class UsuariosComponent implements OnInit {
     password:"",
     role:""
   }
+  sku = "";
+  showTrash = false;
+  backup: Usuario[] = [];
   opResult = {
     success:false,
     error:false
@@ -31,6 +35,7 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this._userService.getUsers().subscribe((response:any)=>{
       this.users = response;
+      this.backup = this.users;
     })
   }
 
@@ -74,15 +79,45 @@ export class UsuariosComponent implements OnInit {
     this.usuario.role = event.target.id === "admin"? "Admin":"Usuario"
   }
 
-  update(usuario: Usuario){
+  update(usuario:any){
     this.showForm = true;
     this.usuario.username = usuario.username;
     this.usuario.password = usuario.password;
     this.usuario.role = usuario.role;
     this.usuario.id = usuario.id
   }
+eliminar(id: number){
+this._userService.eliminarUsuario(id).subscribe((response:any)=>{
+  console.log(response)
+  const newItems = this.users.filter((item:any)=>{
+    return item.id !== id
+  });
+  this.users = newItems;
+})
+}
 
   hide(){
     this.opResult.success = true
   }
+
+  filtrar(){
+
+    if(this.sku.length > 0){
+      let filteredUsers = this.users.filter(usuario =>{
+        return usuario.username.toLowerCase() === this.sku.toLowerCase();
+      });
+      this.users = filteredUsers;
+    };
+       }
+
+       handle(){
+        this.showTrash = true;
+      };
+
+      limpiar(){
+        this.showTrash = false;
+        this.sku = "";
+        this.users = this.backup
+      }
 }
+

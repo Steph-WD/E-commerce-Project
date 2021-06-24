@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UsuariosComponent } from './abms/usuarios/usuarios.component';
 import { LoginComponent } from './shared/login/login.component';
-import { AdministradorComponent } from 'src/app/administrador/administrador.component';
+
 import { AppComponent } from './app.component';
 import { ProductoComponent } from './producto/producto.component';
 import { ListaProductosComponent } from './lista-productos/lista-productos.component';
@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'producto',component: ProductoComponent},
   {path:'lista-productos',component: ListaProductosComponent},
   {path:'producto/:id',component: ProductoDetalleComponent},
-    {path:'administrador',component: AdministradorComponent},
+    
     {path:'productos',component: ProductoCrudComponent},
     {path:'crear-producto',component: CrearProductoComponent},
 

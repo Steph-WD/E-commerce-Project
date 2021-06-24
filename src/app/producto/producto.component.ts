@@ -34,8 +34,8 @@ addCart(producto:Producto){
   this.cartProduct.id = producto.id;
   this.cartProduct.nombre = producto.nombre;
   this.cartProduct.sku = producto.codigo;
-  
-  this.cartProduct.imagenUrl = producto.imagenUrl;
+  this.cartProduct.precio = producto.precio;
+    this.cartProduct.imagenUrl = producto.imagenUrl;
   this.cartProduct.cantidad = this.qty;
   sessionStorage.setItem("producto"+producto.id,JSON.stringify(this.cartProduct));
 }
