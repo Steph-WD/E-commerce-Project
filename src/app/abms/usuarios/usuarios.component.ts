@@ -9,10 +9,10 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-  users: Usuario[] = []; 
+  users: Usuario[] = [];
   showForm = false;
   usuario:Usuario = {
-    id:"",
+    id:0,
     username:"",
     password:"",
     role:""
@@ -45,7 +45,7 @@ export class UsuariosComponent implements OnInit {
 
   submit(event:any){
     event.preventDefault();
-    if (this.usuario.id === "") {
+    if (this.usuario.id === 0) {
       this._userService.insertarUsuario(this.usuario).subscribe((response:any)=>{
         console.log(response)
         this.users.push(response);
@@ -120,4 +120,3 @@ this._userService.eliminarUsuario(id).subscribe((response:any)=>{
         this.users = this.backup
       }
 }
-
