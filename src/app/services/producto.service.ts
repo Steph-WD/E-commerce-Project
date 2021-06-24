@@ -5,6 +5,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProductoService {
+  insertarProducto(producto: any) {
+    throw new Error('Method not implemented.');
+  }
+  updateProducto(producto: any) {
+    throw new Error('Method not implemented.');
+  }
   getAll() {
     throw new Error('Method not implemented.');
   }

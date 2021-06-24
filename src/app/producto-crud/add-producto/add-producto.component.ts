@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Producto } from 'src/app/classes/producto';
+import { Producto } from 'src/app/clases/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 
 @Component({
@@ -45,9 +45,8 @@ export class AddProductoComponent implements OnInit {
   cleanFormData(){
     this.producto.codigo = "";
     this.producto.nombre ="";
-    this.producto.precioCosto = 0;
-    this.producto.precioVenta = 0;
-    this.producto.stock=0;
+    this.producto.precio = 0;
+   
     this.producto.imagenUrl = "";
     this.producto.descripcion = "";
   }
