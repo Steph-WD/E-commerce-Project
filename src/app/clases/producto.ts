@@ -1,4 +1,10 @@
 export class Producto {
+    toLowerCase() {
+      throw new Error('Method not implemented.');
+    }
+    filter(producto: Producto) {
+      throw new Error('Method not implemented.');
+    }
     id:number;
     nombre:string;
     codigo:string;

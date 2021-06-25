@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Producto } from 'src/app/clases/producto';
 import { ProductoService } from 'src/app/services/producto.service';
+import { AddProductoComponent } from './add-producto/add-producto.component';
 
 @Component({
   selector: 'app-producto-crud',
@@ -18,6 +19,8 @@ columnas= [
 
 ]
 productos : any;
+  router: any;
+  
   constructor(private _productoService: ProductoService, private route:Router) { }
 
   ngOnInit(): void {
@@ -28,8 +31,10 @@ productos : any;
     })
   }
 updateProducto(producto: Producto) {
+this.route.navigate(["/add-producto",producto.id])
 
 }
+
 deleteProducto(id: number){
   this._productoService.eliminarProducto(id).subscribe((response:any)=>{
     console.log(response)
@@ -41,17 +46,17 @@ deleteProducto(id: number){
   }
   
 
-//insertarProducto(){
+// insertarProducto(){
 //   this._productoService.insertarProducto({
-//     "id": 1,
-//     "nombre": "FALDA VENECIA",
-//     "codigo": "ASSDF",
-//     "precio": "USD 100",
-//     "descripcion": "Falda a cuadros marron",
-//     "imagenUrl": "https://www.pexels.com/es-es/foto/sudadera-rosa-de-mujer-y-falda-de-cuadros-marrones-794064/"
-// }).subscribe(response => {
+//      id: 1,
+//      nombre: "FALDA VENECIA",
+//      codigo: ASSDF,
+//    "precio: 100",
+//      "descripcion": "Falda a cuadros marron",
+//      "imagenUrl": ""
+//  }).subscribe(response => {
 
-//   })
-//this.route.navigate(['/crear-producto'])
-//}
+//    })
+// this.route.navigate(['/crear-producto'])
+// }
 }

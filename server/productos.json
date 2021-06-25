@@ -1,18 +1,6 @@
 {
   "users": [
     {
-      "id": 2,
-      "username": "user",
-      "password": "user",
-      "role": "user"
-    },
-    {
-      "id": 6,
-      "username": "rodrigo123",
-      "password": "sryi",
-      "role": "Admin"
-    },
-    {
       "id": 7,
       "username": "Edith1233",
       "password": "sryi",
@@ -47,49 +35,15 @@
       "username": "stephaniegonzalez.ab@gmail.com",
       "password": "dlijf{aoiewjf",
       "role": "Admin"
+    },
+    {
+      "id": 13,
+      "username": "stephaniegonzalez.ab@gmail.com",
+      "password": "123455t",
+      "role": "Admin"
     }
   ],
   "productos": [
-    {
-      "id": 6,
-      "nombre": "PANTALON CALIFORNIA",
-      "codigo": "OORED",
-      "precio": 220,
-      "descripcion": "Pantalon California con puntilla blanca",
-      "imagenUrl": "assets/img7.jpg"
-    },
-    {
-      "id": 10,
-      "nombre": "POLLERA CLEOPATRA",
-      "codigo": "LEEWW",
-      "precio": 150,
-      "descripcion": "Pollera Cleopatra a cuadros marrones",
-      "imagenUrl": "assets/img10.jpg"
-    },
-    {
-      "id": 9,
-      "nombre": "PANTALON FORMAL DAMA",
-      "codigo": "KJJFD",
-      "precio": 350,
-      "descripcion": "Pantalon formal dama beige",
-      "imagenUrl": "assets/img9.jpg"
-    },
-    {
-      "id": 5,
-      "nombre": "SACO PAÑO INDIA",
-      "codigo": "LTTRE",
-      "precio": 950,
-      "descripcion": "Saco de paño formal dama varios colores",
-      "imagenUrl": "assets/img5.jpg"
-    },
-    {
-      "id": 3,
-      "nombre": "SHORT Y CHAQUETA RED VELVET",
-      "codigo": "LRESS",
-      "precio": 250,
-      "descripcion": "Conjunto short y chaqueta roja dama",
-      "imagenUrl": "assets/img3.jpg"
-    },
     {
       "id": 8,
       "nombre": "CAMISA BLANCA SKY",

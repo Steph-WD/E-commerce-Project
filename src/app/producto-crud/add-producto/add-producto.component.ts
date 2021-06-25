@@ -50,4 +50,4 @@ export class AddProductoComponent implements OnInit {
     this.producto.descripcion = "";
   }
 
-}
+  }
